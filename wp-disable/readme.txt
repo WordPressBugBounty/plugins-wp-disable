@@ -1,15 +1,14 @@
-=== Reduce HTTP Requests, Disable Emojis & Disable Embeds, Speedup WooCommerce ===
-Contributors: pigeonhut, hosting.io
-Tags: Disable Emoji, Disable Embeds, Disable Gravatars, Remove Querystrings, Reduce HTTP Requests, speedup WooCommerce, Close comments, Optimization, FREE CDN
-Requires at least: 4.5
-Tested up to: 5.3
-Stable tag: 1.5.22
+=== WP Disable ===
+Contributors: pigeonhut
+Tags: disable emoji, disable embeds, remove query strings, performance, optimization
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Reduce HTTP requests - Disable Emojis, Disable Gravatars, Disable Embeds and Remove Querystrings. SpeedUp WooCommerce, Added support to disable pingbacks, disable trackbacks, close comments after 28 days, Added the ability to force pagingation after 20 posts,
-Disable WooCommerce scripts and CSS on non WooCommerce Pages, Disable RSS, Disable XML-RPC, Disable Autosave, Remove Windows Live Writer tag, Remove Shortlink Tag, Remove WP API from header and
- many more features to help speed and SEO gains. Free CDN now included in cache addon.
+Speed up WordPress by disabling unused features — emojis, embeds, query strings, XML-RPC, RSS and more — for fewer requests and faster pages.
 
 == Description ==
 <strong>Reduce HTTP requests</strong> - Disable Emojis, Disable Gravatars, Disable Embeds and Remove Querystrings. SpeedUp WooCommerce, Added support to disable pingbacks, disable trackbacks, close comments after 28 days, Added the ability to force pagingation after 20 posts,
@@ -36,11 +35,6 @@ General Performance improvements: Added support for : disable ping/trackbacks, c
 <b>Have an idea ?</b><br>
 <a href="https://github.com/hosting-io/wp-disable">Public repo on GitHub</a> if you would like to contribute or have any ideas to add.
 
-<b>Docs & Support</b><br>
-The <a href="https://optimisation.io/faq/">documentation is an on-going project</a>, so please bare with us as we update.  If you would like to help with the documentation, please get in touch.
-
-
-
 == Installation ==
 
 This section describes how to install the plugin and get it working.
@@ -59,7 +53,6 @@ This section describes how to install the plugin and get it working.
 = Do I still need caching ? =
 
 Yes, We have just release a <a href="https://wordpress.org/plugins/cache-performance/">WordPress Caching plugin</a> which is really easy to setup and includes a built in CD-rewrite rule system.<br>
-Now also comes with a free cdn
 
 = What about Minification, do I still need it? =
 
@@ -67,7 +60,8 @@ Yes, you absolutely do, and none come close to the awesome <a href="https://en-g
 
 = Do I still need a CDN ? =
 
-Yes, Our Cache plugin now comes with a free CDN. <br>
+Yes, WarpCache is our recommended choice for the ultimate in flexibility and performance. <br>
+We will soon be adding a free CDN for css/js for all users that is integrated with just an "on/off" switch in the plugin and no setup.
 
 = What about my Image Compression =
 
@@ -81,52 +75,20 @@ You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Fr
 
 
 == Changelog ==
-= 1.6.1 =
-* fix bug with paths to spam referrer
-* tested to WP 5.5
+= 2.0.1 =
+* Housekeeping: corrected the Contributors field to a valid WordPress.org username and shortened the short description to meet the 150-character directory limit.
 
-= 1.6.0 =
-* tested upto php 7.4
-* tested with WP 5.3
-* Back in development now, with a few new ideas planned over the coming weeks/months
-
-
-= 1.5.22 =
-* WP Version 5 compatible
-
-= 1.5.21 =
-* New setting to delete all comments completely, great for existing sites that have a lot of old spam comments, but want to turn them off and clean up the database at the same time.
-* Can be found under Admin in Remove Excess Bloat area
-
-= 1.5.20 =
-* Added a note on dashboard about what to look for to disable our plugins.  People have started leaving negative feedback cause can't remember what they installed. Hopefully, this clears it up
-* Removed donation Requests
-* Few other small bugs fixed
-
-= 1.5.19 =
-* IMPORTANT -- please disable and then update the plugin to enable the auto update to work. Something went wrong with the last update and it seems to be fo
-* Freemius Removed
-
-= 1.5.18 =
-* Fix Auto Update  - IMPORTANT -- please disable and re-enable the plugin to enable the auto update to work.
-
-= 1.5.17 =
-* Removed Freemius
-* Added better update notifications
-
-
-= 1.5.16 =
-* General bug fixes and prep for CDN functionality (Premium addon) coming soon
-
-= 1.5.15 =
-* Minor CSS _updates
-* Bug fix with DNS-prefetch
-* Fixed conflicts with other optimisation.io Plugins
-* New feature - Disable Gravatars only in Comments
-
+= 2.0.0 =
+* Major modernization for current WordPress (6.x) and PHP 7.4+ / 8.x.
+* Removed the obsolete "local Google Analytics" offload (Universal Analytics was sunset by Google in July 2023). Existing GA settings, cron and cache are cleaned up automatically on upgrade.
+* Fixed: spam-comment cleaner now deletes correctly; "remove links from comments" no longer blanks comment text; Google Fonts / Font Awesome saved-request counters corrected.
+* Fixed: jQuery Migrate removal no longer downgrades core jQuery on modern WordPress.
+* Security: output escaping, input sanitization, safe redirects, and sanitized server variables throughout.
+* Compliance: unified text domain to "wp-disable", added Requires PHP / Requires at least headers, refreshed branding.
+* Removed legacy duplicate/dead code and updated the plugin name per WordPress.org guidelines.
 
 = 1.5.14 =
-* Started on Documentation (can be found here https://optimisation.io/faq/)
+* Started on Documentation
 * Added donation button - help us make this the best optimisation suite available on the repo.  Every $ donated helps.
 * Added SEO Tab
 * Added ability to remove Duplicate names in breadcrumbs
@@ -141,7 +103,7 @@ You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Fr
 = 1.5.13 =
 * Added Settings link on main Installed Plugin view
 * General code tidy up
-* PHP 7.1 compatible
+* PHP 7.1 compatabile
 * WP 4.8.2 tested
 
 = 1.5.12 =
@@ -153,8 +115,8 @@ You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Fr
 * WooCommerce tab not displaying fixed
 
 = 1.5.1 =
-* More visual clean-ups
-* Removed all web fonts
+* More visual cleanups
+* Removed all webfonts
 * Minor bug fix on reporting on dashboard
 * Plugin is now under 240kb
 
@@ -162,7 +124,7 @@ You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Fr
 * Finished redesign of plugin
 * All stats now in one central dashboard
 * Removed sidebar navigation completely
-* Removed Freemius
+* Remobed Freemius
 * Added check for WooCommerce, so Woo related stuff only shows if Woo is installed
 * Much tighter integration between the 3 optimisation plugins
 * Removed old/excess files
@@ -197,10 +159,3 @@ No new features, but this is a stepping stone.
 * Added the ability to block referrer spam (using Piwik Database)
 * Updated Import/Export settings to now include settings for Image Compression and Cache plugins (if active)
 * General code improvements
-
-== Upgrade Notice ==
-= 1.5.19 =
-Please disable plugin, and then update, or update from the "WP Updates" area
-
-= 1.5.17 =
-Minor Update, Removed Freemius tracking
