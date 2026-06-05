@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) || exit; // Prevent direct access.
 class Optimisationio_Dashboard {
 
 	private static $instance = null;
@@ -251,7 +252,7 @@ class Optimisationio_Dashboard {
 						}
 					}
 					else{
-						$ret['msg'] = "Dectivation error";
+						$ret['msg'] = "Deactivation error";
 					}
 				}
 				else{
