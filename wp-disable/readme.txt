@@ -1,10 +1,10 @@
-=== WP Disable ===
+=== Featherweight — formerly WP Disable ===
 Contributors: pigeonhut
 Tags: disable emoji, disable embeds, remove query strings, performance, optimization
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 2.0.2
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,9 @@ Speed up WordPress by disabling unused features — emojis, embeds, query string
 
 == Description ==
 
-**WP Disable makes your site faster by switching off the features you don't use.** Every disabled item is one less HTTP request, one less script, or one less query — adding up to lighter pages and better Core Web Vitals. Pick only what you need; nothing is forced on.
+**Featherweight makes your site faster by switching off the features you don't use.** Every disabled item is one less HTTP request, one less script, or one less query — adding up to lighter pages and better Core Web Vitals. Pick only what you need; nothing is forced on.
+
+> **Formerly WP Disable.** Same plugin, new name. Featherweight is part of the Folium Studio suite — your existing settings carry over untouched on update.
 
 = Reduce requests & strip front-end bloat =
 * Disable emojis (removes the emoji detection script and styles)
@@ -52,7 +54,7 @@ When WooCommerce is active, you can stop its scripts and styles from loading on 
 * Removing query strings can interfere with some CDNs that key cache on them; leave it off if unsure.
 * Everything is optional and reversible — toggle a setting off and the behaviour returns.
 
-**Have an idea or found a bug?** The plugin is developed in the open — see the [public GitHub repo](https://github.com/hosting-io/wp-disable) to contribute or open an issue.
+**Have an idea or found a bug?** The plugin is developed in the open — see the [public GitHub repo](https://github.com/FoliumStudio/featherweight) to contribute or open an issue.
 
 == Installation ==
 
@@ -60,31 +62,18 @@ This section describes how to install the plugin and get it working.
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings->WP Disable screen to configure the plugin
+3. Open the **Folium → Featherweight** screen to configure the plugin
 
 
 == Frequently Asked Questions ==
 
 = I would like to contribute/I have an idea =
 
-<a href="https://github.com/hosting-io/wp-disable">Public repo on GitHub</a> if you would like to contribute or have any ideas to add.
-
-= Do I still need caching ? =
-
-Yes, We have just release a <a href="https://wordpress.org/plugins/cache-performance/">WordPress Caching plugin</a> which is really easy to setup and includes a built in CD-rewrite rule system.<br>
+<a href="https://github.com/FoliumStudio/featherweight">Public repo on GitHub</a> if you would like to contribute or have any ideas to add.
 
 = What about Minification, do I still need it? =
 
-Yes, you absolutely do, and none come close to the awesome <a href="https://en-gb.wordpress.org/plugins/autoptimize/"> Autoptimize</a> by Frank Goossens.
-
-= Do I still need a CDN ? =
-
-Yes, WarpCache is our recommended choice for the ultimate in flexibility and performance. <br>
-We will soon be adding a free CDN for css/js for all users that is integrated with just an "on/off" switch in the plugin and no setup.
-
-= What about my Image Compression =
-
-You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Free Image Compression plugin</a> which has really good compression ratios with little to no loss of image quality.
+Yes — minification helps on-page performance, but that's outside the remit of this plugin. Featherweight focuses on removing the requests and bloat WordPress adds by default; pair it with a dedicated minification tool if you want that too.
 
 == Screenshots ==
 1. Plugin Interface
@@ -94,6 +83,18 @@ You can try our <a href="https://wordpress.org/plugins/wp-image-compression/">Fr
 
 
 == Changelog ==
+= 2.2.1 =
+* The Folium suite menu now uses a leaf icon (fitting — "Folium" is Latin for leaf).
+* Sitewise now shows as "Coming soon" in the Folium overview until it's publicly released, rather than linking out.
+= 2.2.0 =
+* **WP Disable is now Featherweight** — a new name and look as part of the Folium Studio suite. Nothing else changes: same plugin, same slug, same settings (everything you've configured carries over automatically on update).
+* New plugin icon and banner.
+* Refreshed the readme and FAQ.
+* Coming soon: Rank Math support, alongside the existing Yoast SEO helpers.
+* Housekeeping: removed the unused pre-Folium dashboard, the old cross-plugin add-on installer, and their assets — a smaller, lighter download. No change to any optimisation feature or setting.
+= 2.1.0 =
+* New admin experience: WP Disable now opens inside the shared "Folium" menu with a redesigned, tabbed settings screen (dashboard, live optimisation count, instant search). All existing settings and their behaviour are unchanged.
+* Settings are saved over ajax using the same validation as before — no change to what gets stored.
 = 2.0.2 =
 * Hardening: block direct access to all plugin PHP files.
 * The SEO tab now only appears when a supported SEO plugin (Yoast SEO) is active, and fixed a settings message typo. Props @JeroenSormani.
